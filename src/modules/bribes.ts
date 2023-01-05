@@ -1,4 +1,4 @@
-function MinimumBribes(bribesArray: number[]): void {
+function MinimumBribes(bribesArray: number[]): string | number {
   const orderedArray: number[] = [];
   const bribes: number[] = [];
 
@@ -10,8 +10,6 @@ function MinimumBribes(bribesArray: number[]): void {
 
   for (let i = 0; i < bribesArray.length; i++) {
     const currentNumber = bribesArray[i];
-    const orderedNumber = orderedArray[0];
-
     const swap = orderedArray.indexOf(currentNumber);
 
     if (swap > 2) {
@@ -19,7 +17,7 @@ function MinimumBribes(bribesArray: number[]): void {
       break;
     }
 
-    if (currentNumber !== orderedNumber) {
+    if (swap > 0) {
       bribes.push(swap);
     }
 
@@ -27,10 +25,10 @@ function MinimumBribes(bribesArray: number[]): void {
   }
 
   if (isChaotic) {
-    console.log("Too chaotic");
-  } else {
-    console.log(bribes.reduce((a, b) => a + b, 0));
+    return "Too chaotic";
   }
+
+  return bribes.reduce((a, b) => a + b, 0);
 }
 
 export default MinimumBribes;
