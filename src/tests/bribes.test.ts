@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals";
-import MinimumBribes from "../modules/bribes";
+import MinimumBribes from "../modules/arrays/bribes";
 
 describe("Minimum Bribes", () => {
   it("should return the number of bribes", () => {
