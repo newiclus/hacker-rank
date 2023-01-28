@@ -1,3 +1,10 @@
+/*
+  Create a function that finds the lucky number in and array of positives numbers.
+  A lucky number is one that is present in an array the same amount as its value.
+
+  Note: if there are multiple lucky numbers, return the largest one.
+*/
+
 function LuckyNumber(arr: number[]): number {
   const luckies: number[] = [];
   const numbersObj: Record<string, any> = {};
